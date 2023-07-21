@@ -12,7 +12,7 @@ data "template_file" "user_data" {
   vars = {
     ansible_repo = var.ansible_repo
     ansible_branch = var.ansible_branch
-    waldur_api_url = var.WALDUR_API_URL
+    waldur_api_url = var.waldur_api_url
     waldur_api_token = var.waldur_api_token
     waldur_order_item_uuid = var.waldur_order_item_uuid
     glauth_admin_uidnumber = var.glauth_admin_uidnumber
