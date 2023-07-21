@@ -46,37 +46,37 @@ variable "ansible_branch" {
   default = "6"
 }
 
-variable "WALDUR_API_URL" {
+variable "waldur_api_url" {
   type = string
   description = "Waldur API URL, e.g. https://waldur.example.com/api/"
 }
 
-variable "WALDUR_API_TOKEN" {
+variable "waldur_api_token" {
   type = string
   description = "Tocken for Waldur API access"
 }
 
-variable "WALDUR_ORDER_ITEM_UUID" {
+variable "waldur_order_item_uuid" {
   type = string
   description = "Order item UUID from Waldur"
 }
 
-variable "GLAUTH_ADMIN_UIDNUMBER" {
+variable "glauth_admin_uidnumber" {
   type = string
   description = "User number for admin user in Glauth"
 }
 
-variable "GLAUTH_ADMIN_PASSWORD" {
+variable "glauth_admin_pgroup" {
+  type = string
+  description = "Group number for admin user in Glauth"
+}
+
+variable "glauth_admin_password" {
   type = string
   description = "Password for admin user in Glauth"
 }
 
-variable "GLAUTH_ADMIN_PASSWORD_DIGEST" {
+variable "glauth_admin_password_digest" {
   type = string
   description = "Password digest for admin user in Glauth"
-}
-
-variable "GLAUTH_ADMIN_PGROUP" {
-  type = string
-  description = "Group number for admin user in Glauth"
 }

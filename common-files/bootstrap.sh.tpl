@@ -32,9 +32,9 @@ waldur_api_token: ${waldur_api_token}
 waldur_order_item_uuid: ${waldur_order_item_uuid}
 
 glauth_admin_uidnumber: ${glauth_admin_uidnumber}
+glauth_admin_pgroup: ${glauth_admin_pgroup}
 glauth_admin_password: ${glauth_admin_password}
 glauth_admin_password_digest: ${glauth_admin_password_digest}
-glauth_admin_pgroup: ${glauth_admin_pgroup}
 EOF
 
 cat > /root/update_ansible_repo <<EOF
