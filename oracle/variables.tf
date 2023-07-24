@@ -53,7 +53,7 @@ variable "waldur_api_url" {
 
 variable "waldur_api_token" {
   type = string
-  description = "Tocken for Waldur API access"
+  description = "Token for Waldur API access"
 }
 
 variable "waldur_order_item_uuid" {
