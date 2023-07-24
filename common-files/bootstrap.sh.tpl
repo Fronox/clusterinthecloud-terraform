@@ -26,6 +26,21 @@ echo "{\"csp\":\"${cloud-platform}\", \"fileserver_ip\":\"${fileserver-ip}\", \"
 
 git clone --branch "${ansible_branch}" "${ansible_repo}" /root/citc-ansible
 
+cat >> /root/citc-ansible/group_vars/management.yml <<EOF
+waldur_api_url: ${waldur_api_url}
+waldur_api_token: ${waldur_api_token}
+waldur_order_item_uuid: ${waldur_order_item_uuid}
+
+glauth_admin_uidnumber: ${glauth_admin_uidnumber}
+glauth_admin_pgroup: ${glauth_admin_pgroup}
+glauth_admin_password: ${glauth_admin_password}
+glauth_admin_password_digest: ${glauth_admin_password_digest}
+EOF
+
+cat >> /root/citc-ansible/group_vars/compute.yml <<EOF
+glauth_admin_password: ${glauth_admin_password}
+EOF
+
 cat > /root/update_ansible_repo <<EOF
 #! /bin/bash
 cd /root/citc-ansible

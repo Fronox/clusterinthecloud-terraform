@@ -12,6 +12,13 @@ data "template_file" "user_data" {
   vars = {
     ansible_repo = var.ansible_repo
     ansible_branch = var.ansible_branch
+    waldur_api_url = var.waldur_api_url
+    waldur_api_token = var.waldur_api_token
+    waldur_order_item_uuid = var.waldur_order_item_uuid
+    glauth_admin_uidnumber = var.glauth_admin_uidnumber
+    glauth_admin_pgroup = var.glauth_admin_pgroup
+    glauth_admin_password = var.glauth_admin_password
+    glauth_admin_password_digest = var.glauth_admin_password_digest
     cloud-platform = "oracle"
     fileserver-ip  = oci_file_storage_mount_target.ClusterFSMountTarget.hostname_label
     custom_block = templatefile("${path.module}/files/bootstrap_custom.sh.tpl", {})
