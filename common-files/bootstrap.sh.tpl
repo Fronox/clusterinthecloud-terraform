@@ -37,6 +37,10 @@ glauth_admin_password: ${glauth_admin_password}
 glauth_admin_password_digest: ${glauth_admin_password_digest}
 EOF
 
+cat >> /root/citc-ansible/group_vars/compute.yml <<EOF
+glauth_admin_password: ${glauth_admin_password}
+EOF
+
 cat > /root/update_ansible_repo <<EOF
 #! /bin/bash
 cd /root/citc-ansible
